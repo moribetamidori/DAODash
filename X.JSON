@@ -1,0 +1,143 @@
+{
+    "data": {
+        "address": "0xdc957cd1b44620a82084a923fba5408e50815e2e",
+        "updated_at": "2022-06-25T12:09:04.062983131Z",
+        "next_update_at": "2022-06-25T12:14:04.062983241Z",
+        "quote_currency": "USD",
+        "chain_id": 1,
+        "items": [
+            {
+                "block_signed_at": "2022-06-01T16:55:04Z",
+                "block_height": 14885938,
+                "tx_hash": "0x2818d97db21d6c7f98292e83ae240fc3a0e10be434e41ca441bb0d4b438f0abb",
+                "tx_offset": 107,
+                "successful": true,
+                "from_address": "0x3ada0a88835691dac6ae3ea2bdd4af14ee76b081",
+                "from_address_label": null,
+                "to_address": "0x5dc0bb1a0373a3a963f49ef2f204647f889df117",
+                "to_address_label": null,
+                "value": "0",
+                "value_quote": 0.0,
+                "gas_offered": 123352,
+                "gas_spent": 121986,
+                "gas_price": 84442821950,
+                "fees_paid": null,
+                "gas_quote": 20.114147011315808,
+                "gas_quote_rate": 1952.670166015625,
+                "transfers": [
+                    {
+                        "block_signed_at": "2022-06-01T16:55:04Z",
+                        "tx_hash": "0x2818d97db21d6c7f98292e83ae240fc3a0e10be434e41ca441bb0d4b438f0abb",
+                        "from_address": "0x5dc0bb1a0373a3a963f49ef2f204647f889df117",
+                        "from_address_label": null,
+                        "to_address": "0xdc957cd1b44620a82084a923fba5408e50815e2e",
+                        "to_address_label": null,
+                        "contract_decimals": 6,
+                        "contract_name": "USD Coin",
+                        "contract_ticker_symbol": "USDC",
+                        "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                        "logo_url": "https://logos.covalenthq.com/tokens/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+                        "transfer_type": "IN",
+                        "delta": "2500000000",
+                        "balance": null,
+                        "quote_rate": 1.0683674812316895,
+                        "delta_quote": 2670.9187030792236,
+                        "balance_quote": null,
+                        "method_calls": null
+                    }
+                ]
+            },
+            {
+                "block_signed_at": "2022-05-02T22:14:02Z",
+                "block_height": 14700860,
+                "tx_hash": "0x79b8abaab6809f7764f734f192092b0fdfc872d72329ff5e1b4e55ce9bdbdc8f",
+                "tx_offset": 137,
+                "successful": true,
+                "from_address": "0x3ada0a88835691dac6ae3ea2bdd4af14ee76b081",
+                "from_address_label": null,
+                "to_address": "0x5dc0bb1a0373a3a963f49ef2f204647f889df117",
+                "to_address_label": null,
+                "value": "0",
+                "value_quote": 0.0,
+                "gas_offered": 137022,
+                "gas_spent": 135336,
+                "gas_price": 79675197216,
+                "fees_paid": null,
+                "gas_quote": 30.830494602419954,
+                "gas_quote_rate": 2859.196533203125,
+                "transfers": [
+                    {
+                        "block_signed_at": "2022-05-02T22:14:02Z",
+                        "tx_hash": "0x79b8abaab6809f7764f734f192092b0fdfc872d72329ff5e1b4e55ce9bdbdc8f",
+                        "from_address": "0x5dc0bb1a0373a3a963f49ef2f204647f889df117",
+                        "from_address_label": null,
+                        "to_address": "0xdc957cd1b44620a82084a923fba5408e50815e2e",
+                        "to_address_label": null,
+                        "contract_decimals": 6,
+                        "contract_name": "USD Coin",
+                        "contract_ticker_symbol": "USDC",
+                        "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                        "logo_url": "https://logos.covalenthq.com/tokens/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+                        "transfer_type": "IN",
+                        "delta": "2500000000",
+                        "balance": null,
+                        "quote_rate": 0.9976323246955872,
+                        "delta_quote": 2494.080811738968,
+                        "balance_quote": null,
+                        "method_calls": null
+                    }
+                ]
+            },
+            {
+                "block_signed_at": "2022-04-20T22:03:29Z",
+                "block_height": 14624537,
+                "tx_hash": "0xdb428844c732ec53fd08110b4431131f100ee96b56939be17c3389245ddb9d2c",
+                "tx_offset": 1,
+                "successful": true,
+                "from_address": "0xdc957cd1b44620a82084a923fba5408e50815e2e",
+                "from_address_label": null,
+                "to_address": "0x5dc0bb1a0373a3a963f49ef2f204647f889df117",
+                "to_address_label": null,
+                "value": "0",
+                "value_quote": 0.0,
+                "gas_offered": 100996,
+                "gas_spent": 99935,
+                "gas_price": 48522203157,
+                "fees_paid": null,
+                "gas_quote": 14.970606902214733,
+                "gas_quote_rate": 3087.3173828125,
+                "transfers": [
+                    {
+                        "block_signed_at": "2022-04-20T22:03:29Z",
+                        "tx_hash": "0xdb428844c732ec53fd08110b4431131f100ee96b56939be17c3389245ddb9d2c",
+                        "from_address": "0x5dc0bb1a0373a3a963f49ef2f204647f889df117",
+                        "from_address_label": null,
+                        "to_address": "0xdc957cd1b44620a82084a923fba5408e50815e2e",
+                        "to_address_label": null,
+                        "contract_decimals": 6,
+                        "contract_name": "USD Coin",
+                        "contract_ticker_symbol": "USDC",
+                        "contract_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                        "logo_url": "https://logos.covalenthq.com/tokens/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+                        "transfer_type": "IN",
+                        "delta": "1250000000",
+                        "balance": null,
+                        "quote_rate": 1.0017660856246948,
+                        "delta_quote": 1252.2076070308685,
+                        "balance_quote": null,
+                        "method_calls": null
+                    }
+                ]
+            }
+        ],
+        "pagination": {
+            "has_more": false,
+            "page_number": 0,
+            "page_size": 99999,
+            "total_count": null
+        }
+    },
+    "error": false,
+    "error_message": null,
+    "error_code": null
+}

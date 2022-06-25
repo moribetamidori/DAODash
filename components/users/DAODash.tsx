@@ -1,60 +1,27 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Button, ButtonGroup } from '@chakra-ui/react'
-import { doc, getDoc, collection, addDoc, setDoc, getDocs} from 'firebase/firestore';
-import { firestore } from '../lib/firebaseConfig/init'
-import { useState , useEffect} from 'react';
-import React from "react";
+// import styles from '../../styles/main.css'
+// import styles from '../../styles/Profile.module.css';
+// import styles from '../../styles/Profile.module.css';
+// import styles from '../../styles/Admin.module.css';
+import Link from 'next/link'
+import { useAuth,signOut } from '../../lib/authContext'
 import {useMoralis} from "react-moralis";
 import { useRouter } from 'next/router';
 
 interface Props {
-  posts: any
+  username: any
 }
-
-export default function Home(props:Props): any {
-  const { isAuthenticated, authenticate } = useMoralis();
+export default function DAODashProfilePage(props:Props): any {
+  const {  username} = props;
+  const { user, logout } = useMoralis();
   const router = useRouter();
-  const { user } = useMoralis();
-  const [username, setUsername] = useState();
-  console.log("hey 1", username)
 
-  useEffect(() => {
-    if (isAuthenticated){
-      const address = user?.attributes.ethAddress
-      setUsername(address);
+  const signOut = async () => {
+    await logout();
+    console.log("disconnecting")
+    router.replace("/")
 
-      // console.log("hey 2", username)
-    } 
-  }, [isAuthenticated]);
-
-  // if(username){
-    useEffect(()=> {
-      const storeData = async() => {
-        if(username){
-          await setDoc(doc(firestore, "usernames", username!), {
-            walletAddress: username
-            
-          })    
-          router.replace(`/${username}`);
-
-        console.log("test", username)
-      }
-
-      }
-      storeData();
-
-
-    },[username])
-   
-    // router.replace(`/${username}`);
-  // }
-  return (
-    <>
-      <Head>
-        <title>Home</title>
-        
-      </Head>
+}
+    return <>
 
 <html lang="en" className="h-100">
   <head>
@@ -72,7 +39,7 @@ export default function Home(props:Props): any {
 
   <div id="Profile">
     <h1 id="PlayerName">
-      Player Name
+      {username}
     </h1>
     <div className="ProfileInfo">
     <h3 id="PlayerLevel">Player Level</h3>
@@ -113,22 +80,6 @@ export default function Home(props:Props): any {
   </button>
   </div>
 
-  <div className="Plant" style={{left:"640px"}}>
-    <img src="img/plant1.png"/>
-    <button 
-    className="WalletBttn"
-    onClick={() =>
-      authenticate({ signingMessage: "Authorize linking of your wallet" })
-    }>
-    <div className="DAOName">
-      Connect 
-    </div>
-    <div className="PlantXP">
-      Your Wallet
-    </div>
-  </button>
-  </div>
-
   <div className="Plant" style={{left:"750px"}}>
     <img src="img/plant1.png"/>
     <button className="PlantBttn">
@@ -140,12 +91,11 @@ export default function Home(props:Props): any {
     </div>
   </button>
   </div>
-
+  <Link href={'/'}>
+<button onClick={signOut}> <a className="mt-8 inline-flex items-left px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-indigo-600 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Signout</a></button>
+</Link>
 <script src="../js/script.js"></script>
 </html>
 </>
 
-
-  )
 }
-

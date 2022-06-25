@@ -15,9 +15,9 @@ type Props = {
 export default function FrontPage({children} : Props){
    
     return <>
- <div className="flex flex-col min-h-screen container mx-auto md:w-11/12  lg:w-4/5
-    divide-y divide-black-500">
-
+ {/* <div className="flex flex-col min-h-screen container mx-auto md:w-11/12  lg:w-4/5
+    divide-y divide-black-500"> */}
+{/* 
               <nav className="mt-8 mb-8  relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="mb-10flex items-center justify-between w-full md:w-auto">
@@ -31,15 +31,15 @@ export default function FrontPage({children} : Props){
                   </div>
                 </div>
                
-              </nav>
+              </nav> */}
             
 
     <div className="flex-grow">
         {children}
         
     </div>
-    <Footer />
-    </div>
+    {/* <Footer /> */}
+    {/* </div> */}
 
     </>
 
