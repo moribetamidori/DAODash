@@ -1,11 +1,12 @@
-// import styles from '../../styles/main.css'
-// import styles from '../../styles/Profile.module.css';
-// import styles from '../../styles/Profile.module.css';
-// import styles from '../../styles/Admin.module.css';
 import Link from 'next/link'
 import { useAuth,signOut } from '../../lib/authContext'
 import {useMoralis} from "react-moralis";
 import { useRouter } from 'next/router';
+
+//create a plant list, mapping based on bounty size 
+// export async function getServerSideProps(context:any) {
+
+// }
 
 interface Props {
   username: any
