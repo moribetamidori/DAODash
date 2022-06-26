@@ -18,7 +18,28 @@ export default function Home(props:Props): any {
   const { user } = useMoralis();
   const [username, setUsername] = useState();
   // console.log("hey 1", username)
+  const login = async () => {
+    if (!isAuthenticated) {
 
+      await authenticate({ 
+              provider: "walletconnect", 
+              mobileLinks: [
+                "rainbow",
+                "metamask",
+                "argent",
+                "trust",
+                "imtoken",
+                "pillar",
+              ] 
+          })
+        .then(function (user) {
+          console.log(user!.get("ethAddress"));
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  }
   useEffect(() => {
     if (isAuthenticated){
       const address = user?.attributes.ethAddress
@@ -80,12 +101,19 @@ export default function Home(props:Props): any {
     <h3 id="PlayerXP">Player XP</h3>
   </div>
   <div id="Signout">
-  <Link href={'/'}>
+  {/* <Link href={'/'}>
 
     <button onClick={() =>
       authenticate({ signingMessage: "Authorize linking of your wallet" })
     } className="WalletBttn"> Connect Your Wallet </button>
+  </Link> */}
+
+    <Link href={'/'}>
+
+    <button onClick={login}
+     className="WalletBttn"> Connect Your Wallet </button>
   </Link>
+  
   </div>
     <img src={'/img/bar.png'} id="XPProgressBarFrame" className="Progress"/>
     <img src="/img/sq.png" id="XPProgressBar" className="Progress"/>
