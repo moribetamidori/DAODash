@@ -105,7 +105,7 @@ export default function Home(props:Props): any {
 
     <button onClick={() =>
       authenticate({ signingMessage: "Authorize linking of your wallet" })
-    } className="WalletBttn"> Connect Your Wallet </button>
+    } className="WalletBttn"> Connect Metamask </button>
   </Link> */}
 
     <Link href={'/'}>
@@ -113,7 +113,18 @@ export default function Home(props:Props): any {
     <button onClick={login}
      className="WalletBttn"> Connect Your Wallet </button>
   </Link>
-  
+
+  </div>
+
+  <div id="Signout2">
+    <Link href={'/'}>
+
+    <button onClick={() =>
+      authenticate({ signingMessage: "Authorize linking of your wallet" })
+    }
+     className="WalletBttn2"> Connect Metamask </button>
+  </Link>
+
   </div>
     <img src={'/img/bar.png'} id="XPProgressBarFrame" className="Progress"/>
     <img src="/img/sq.png" id="XPProgressBar" className="Progress"/>

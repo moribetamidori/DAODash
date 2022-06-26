@@ -58,10 +58,6 @@ export async function getServerSideProps(context:any) {
                    }
 
             })()
-            // console.log("usd wwwww", usd)
-
-
-          
         }
     )
 

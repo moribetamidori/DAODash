@@ -142,6 +142,20 @@ padding: 8px 18px;
 background-color: #f00e99;
 color: white;
 }
+.WalletBttn2 {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    border: 0px;
+    padding: 8px 18px;
+    background-color: #f08e0e;
+    color: white;
+    }
 .DAOName{
 }
 
@@ -169,3 +183,11 @@ color: white;
 }
 
 
+#Signout2{
+    position: relative;
+}
+#Signout2 button{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
