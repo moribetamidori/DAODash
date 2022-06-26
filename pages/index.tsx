@@ -7,7 +7,7 @@ import { useState , useEffect} from 'react';
 import React from "react";
 import {useMoralis} from "react-moralis";
 import { useRouter } from 'next/router';
-
+import Link from 'next/link'
 interface Props {
   posts: any
 }
@@ -17,7 +17,7 @@ export default function Home(props:Props): any {
   const router = useRouter();
   const { user } = useMoralis();
   const [username, setUsername] = useState();
-  console.log("hey 1", username)
+  // console.log("hey 1", username)
 
   useEffect(() => {
     if (isAuthenticated){
@@ -38,7 +38,7 @@ export default function Home(props:Props): any {
           })    
           router.replace(`/${username}`);
 
-        console.log("test", username)
+        // console.log("test", username)
       }
 
       }
@@ -79,6 +79,14 @@ export default function Home(props:Props): any {
     <h3>  |  </h3>
     <h3 id="PlayerXP">Player XP</h3>
   </div>
+  <div id="Signout">
+  <Link href={'/'}>
+
+    <button onClick={() =>
+      authenticate({ signingMessage: "Authorize linking of your wallet" })
+    } className="WalletBttn"> Connect Your Wallet </button>
+  </Link>
+  </div>
     <img src={'/img/bar.png'} id="XPProgressBarFrame" className="Progress"/>
     <img src="/img/sq.png" id="XPProgressBar" className="Progress"/>
   <div style={{height:"40px"}}></div>
@@ -88,7 +96,7 @@ export default function Home(props:Props): any {
     <button className="SkillTag stB">NextJS</button>
   </div>
   </div>
-
+  
   <div id="Character">
     <img src="img/character.png" style={{width:"100%"}}/>
   </div>
@@ -108,23 +116,20 @@ export default function Home(props:Props): any {
       CityDAO
     </div>
     <div className="PlantXP">
-      4060 XP
+      5060 XP
     </div>
   </button>
   </div>
 
-  <div className="Plant" style={{left:"640px"}}>
-    <img src="img/plant1.png"/>
+  <div className="Plant" style={{left:"675px"}}>
+    <img src="img/plant0.png"/>
     <button 
-    className="WalletBttn"
-    onClick={() =>
-      authenticate({ signingMessage: "Authorize linking of your wallet" })
-    }>
+    className="PlantBttn">
     <div className="DAOName">
-      Connect 
+      Juicebox 
     </div>
     <div className="PlantXP">
-      Your Wallet
+      300 XP
     </div>
   </button>
   </div>
@@ -136,7 +141,7 @@ export default function Home(props:Props): any {
       Gitcoin
     </div>
     <div className="PlantXP">
-      1050 XP
+      2750 XP
     </div>
   </button>
   </div>

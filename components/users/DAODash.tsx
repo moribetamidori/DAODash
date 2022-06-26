@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useAuth,signOut } from '../../lib/authContext'
 import {useMoralis} from "react-moralis";
 import { useRouter } from 'next/router';
-
+import DAOFeed from '../users/DAOFeed'
 //create a plant list, mapping based on bounty size 
 // export async function getServerSideProps(context:any) {
 
@@ -10,15 +10,19 @@ import { useRouter } from 'next/router';
 
 interface Props {
   username: any
+  daos: any
 }
+
 export default function DAODashProfilePage(props:Props): any {
-  const {  username} = props;
+  const {  username, daos} = props;
   const { user, logout } = useMoralis();
   const router = useRouter();
+  const bounties = daos.map((d:any)=>d.bountySum)
+  const bountiesSum = Math.round(bounties.reduce((partialSum:any, a:any) => partialSum + a, 0));
 
   const signOut = async () => {
     await logout();
-    console.log("disconnecting")
+    // console.log("disconnecting")
     router.replace("/")
 
 }
@@ -43,9 +47,16 @@ export default function DAODashProfilePage(props:Props): any {
       {username}
     </h1>
     <div className="ProfileInfo">
-    <h3 id="PlayerLevel">Player Level</h3>
+    <h3 id="PlayerLevel">Player Level 3</h3>
     <h3>  |  </h3>
-    <h3 id="PlayerXP">Player XP</h3>
+    <h3 id="PlayerXP">Player {bountiesSum*10} XP </h3>
+
+  </div>
+  <div id="Signout">
+  <Link href={'/'}>
+
+    <button onClick={signOut} className="SkillTag stS"> Disconnect </button>
+  </Link>
   </div>
     <img src={'/img/bar.png'} id="XPProgressBarFrame" className="Progress"/>
     <img src="/img/sq.png" id="XPProgressBar" className="Progress"/>
@@ -60,41 +71,19 @@ export default function DAODashProfilePage(props:Props): any {
   <div id="Character">
     <img src="img/character.png" style={{width:"100%"}}/>
   </div>
+  <Link href={'/metaverse'}>
 
+<a>
   <div id="Door">
     <img src="img/door.png"/>
   </div>
-
+  </a>
+  </Link>
   <div id="Window">
     <img src="img/window.png"/>
   </div>
+  <DAOFeed daos={daos}/>
 
-  <div className="Plant" style={{left:"500px"}}>
-    <img src="img/plant2.png"/>
-    <button className="PlantBttn">
-    <div className="DAOName">
-      CityDAO
-    </div>
-    <div className="PlantXP">
-      4060 XP
-    </div>
-  </button>
-  </div>
-
-  <div className="Plant" style={{left:"750px"}}>
-    <img src="img/plant1.png"/>
-    <button className="PlantBttn">
-    <div className="DAOName">
-      Gitcoin
-    </div>
-    <div className="PlantXP">
-      1050 XP
-    </div>
-  </button>
-  </div>
-  <Link href={'/'}>
-<button onClick={signOut}> <a className="mt-8 inline-flex items-left px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-indigo-600 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Signout</a></button>
-</Link>
 <script src="../js/script.js"></script>
 </html>
 </>

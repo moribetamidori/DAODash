@@ -8,4 +8,7 @@ export enum NetworkName {
     xdai = 'xdai',
     matic = 'matic',
     mumbai = 'mumbai',
+    cronos ='cronos',
+    cronostesnet='cronostesnet'
+
   }

@@ -21,6 +21,7 @@ export const NETWORKS: Record<number, NetworkInfo> = {
 //     blockExplorer: '',
 //     rpcUrl: 'http://' + window.location.hostname + ':8545',
 //   },
+
   1: {
     name: NetworkName.mainnet,
     color: '#ff8b9e',
@@ -90,6 +91,26 @@ export const NETWORKS: Record<number, NetworkInfo> = {
     faucet: 'https://faucet.matic.network/',
     blockExplorer: 'https://mumbai-explorer.matic.today/',
   },
+  25: {
+        name: NetworkName.cronos,
+        color: '#2bbdf7',
+        chainId: 25,
+        price: 1,
+        gasPrice: 5000000000000,
+        rpcUrl: 'https://evm.cronos.org/',
+        faucet: 'https://cronos.org/faucet',
+        blockExplorer: 'https://cronoscan.com',
+      },
+      338: {
+        name: NetworkName.cronostesnet,
+        color: '#2bbdf7',
+        chainId: 25,
+        price: 1,
+        gasPrice: 5000000000000,
+        rpcUrl: 'https://evm-t3.cronos.org/',
+        faucet: 'https://cronos.org/faucet',
+        blockExplorer: 'https://testnet.cronoscan.com',
+      },
 }
 
 const NETWORKS_BY_NAME = Object.values(NETWORKS).reduce(
