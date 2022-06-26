@@ -1,5 +1,4 @@
 import React from "react";
-import {MoralisProvider} from "react-moralis";
 import {useMoralis} from "react-moralis";
 import { Box, Button } from "@chakra-ui/react";
 const MoralisAuth = () => {

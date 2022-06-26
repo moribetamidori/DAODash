@@ -1,14 +1,4 @@
-import { useAuth,signOut } from '../../lib/authContext'
-import Link from 'next/link'
-import { Button } from '@chakra-ui/react'
-import { Children, Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import usePortal from 'react-cool-portal';
-import Dashboard from '../users/Dashboard'
-import { useEffect, useState} from 'react'
-import { getUserWithUsername } from '../../lib/firebaseConfig/init'
-import Footer from '../layout/footer'
+
 type Props = {
   children: React.ReactNode;
 };

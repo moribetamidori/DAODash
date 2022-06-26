@@ -1,5 +1,4 @@
 import Header from './header'
-import Footer from './footer'
 import { useAuth } from '../../lib/authContext'
 import FrontPage from './frontpage'
 type Props = {

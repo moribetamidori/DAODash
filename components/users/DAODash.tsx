@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useAuth,signOut } from '../../lib/authContext'
 import {useMoralis} from "react-moralis";
 import { useRouter } from 'next/router';
 import DAOFeed from '../users/DAOFeed'
@@ -84,7 +83,7 @@ export default function DAODashProfilePage(props:Props): any {
   </div>
   <DAOFeed daos={daos}/>
 
-<script src="../js/script.js"></script>
+{/* <script src="../js/script.js"></script> */}
 </html>
 </>
 

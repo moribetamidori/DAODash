@@ -6,12 +6,9 @@ import '../lib/firebaseConfig/init'
 import { ChakraProvider } from '@chakra-ui/react'
 import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
-import FrontPage from '../components/layout/frontpage'
 import '../styles/main.css';
 import {MoralisProvider} from "react-moralis";
-import {useMoralis} from "react-moralis";
 import React from "react";
-import { NetworkProvider } from '../lib/NetworkProvider'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode

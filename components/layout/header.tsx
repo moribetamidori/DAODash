@@ -1,9 +1,7 @@
 import { useAuth,signOut } from '../../lib/authContext'
-import Dashboard from '../users/Dashboard'
 import { useEffect, useState} from 'react'
 import { getUserWithUsername } from '../../lib/firebaseConfig/init'
 import {memberToJSON} from '../../lib/firebaseConfig/init'
-import DAODashProfilePage from '../users/DAODash'
 type Props = {
   children: React.ReactNode;
 };
@@ -27,7 +25,7 @@ export default function Header({children} : Props){
     
     return <>
      {realUser && username?<>
-      <DAODashProfilePage/>
+      {/* <DAODashProfilePage/> */}
 
        {/* <Dashboard user={realUser} username={username}>{children} </Dashboard> */}
         </>:null}
